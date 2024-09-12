@@ -1,0 +1,67 @@
+/* Keyframe animation for smoother fade-in */
+@keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+    
+    /* Optimized Timeline Styles */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    
+    .timeline-box {
+      padding: 0.75rem 1.25rem;
+      background-color: #1f2937;
+      color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .timeline-icon {
+      margin-left: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #facc15;
+      border-radius: 50%;
+      padding: 0.5rem;
+      box-shadow: 0 0 15px rgba(250, 204, 21, 0.5);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: linear-gradient(to bottom, #facc15 50%, transparent 50%);
+      height: 100%;
+      left: 10px;
+      top: 0;
+    }
+    
+    .timeline-item:first-child::before {
+      top: 50%;
+    }
+    
+    .timeline-item:last-child::before {
+      height: 50%;
+    }
+    
